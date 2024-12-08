@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(120, 35%, 26%);
+  color: hsl(0, 0%, 92%);
+  font-family: "Trebuchet MS", "Arial", sans-serif;
+}
+
+h1 {
+  text-wrap: wrap;
+  text-align: center;
+  max-width: 95vw;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+#calendar > p {
+  text-align: center;
+  margin: 8px 0;
+}
+
+.datebox {
+  border: 2px solid black;
+  background-color: rgb(206, 2, 2);
+  margin: 4px 8px;
+  aspect-ratio: 1 / 1;
+  box-shadow: 1px 1px 4px 0px #22222299;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.datebox:hover {
+  opacity: 0.8;
+}
+
+.datebox:has(#last) {
+  background-color: hsl(0, 95%, 54%);
+}
+
+a {
+  text-decoration: none;
+}
+
+.datebox p {
+  color: hsl(0, 0%, 92%);
+  margin: 4px;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .datebox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .datebox > p {
+    margin: 0;
+  }
+}
